@@ -1,0 +1,43 @@
+{
+  "name": "KrunkerCentral Dogeware",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "homepage_url": "https://krunkercentral.com",
+  "description": "Krunkercentrals Dogeware extension. - Made by MJMODZZ#0187",
+  "icons": {
+    "16": "main/icons/icon16.png",
+    "48": "main/icons/icon48.png",
+    "128": "main/icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "main/icons/icon19.png",
+    "default_title": "Original made by chonker1337, fixed by MJMODZZ#0187"
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "*://krunker.io/*",
+    "*://matchmaker.krunker.io/*",
+    "*://linkvertise.com/*",
+    "*://api.countapi.xyz/*",
+    "*://dogeware.cheems.art/*"
+  ],
+  "web_accessible_resources": [
+    "*.js",
+    "*.css",
+    "*.obj",
+    "*.png",
+    "*.mp3",
+    "*.ttf",
+    "*.txt",
+    "*.html",
+    "*.json"
+  ],
+  "background": {
+    "scripts": [
+      "main/main.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
