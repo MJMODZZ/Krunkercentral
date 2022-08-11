@@ -19,9 +19,7 @@
     "webRequestBlocking",
     "*://krunker.io/*",
     "*://matchmaker.krunker.io/*",
-    "*://linkvertise.com/*",
     "*://api.countapi.xyz/*",
-    "*://dogeware.cheems.art/*"
   ],
   "web_accessible_resources": [
     "*.js",
