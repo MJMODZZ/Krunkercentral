@@ -1,5 +1,5 @@
 if (typeof version === 'undefined') {
-  const version = '4.2';
+  const version = '4.3';
 
   if (!window.injected) {
     window.injected = true;
