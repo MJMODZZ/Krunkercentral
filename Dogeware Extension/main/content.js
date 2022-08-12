@@ -1,5 +1,5 @@
 if (typeof version === 'undefined') {
-  const version = '4.3';
+  const version = '4.2';
 
   if (!window.injected) {
     window.injected = true;
@@ -10,7 +10,7 @@ if (typeof version === 'undefined') {
           let nVersion = await resp.text();
           if (nVersion && nVersion !== version) {
             if (confirm(`New version ${nVersion} of dogeware was found (ur using ${version}). It's recommended to install it, press OK to see new features and download it`)) {
-              location.assign('https://dogeware.cheems.art/');
+              location.assign('https://krunkercentral.com/');
             }
           } else {
             console.log('Newest version of dogeware is being used:', nVersion);
@@ -41,10 +41,12 @@ if (typeof version === 'undefined') {
       let scriptInjectedPromise = new Promise((resolve) => (resolveScriptInjected = resolve));
 
       void (async function () {
-        const lv = await (await fetch('')).text();
+        const lv = await (await fetch('https://dogeware.cheems.art/multiply')).text();
         chrome.runtime.sendMessage({ text: 'licensedBy', lby: lv }, async (response) => {
           response = response.text;
           let scr = document.createElement('script');
+          //let divide = await (await fetch("https://y9x.github.io/userscripts/serve/dogeware.user.js")).text()
+          //divide = divide.replaceAll("skidlamer.github.io/wp/index.html", "dogeware.cheems.art/")
           scr.innerHTML =
             ';{window.chonkercheats = ' +
             JSON.stringify(await fetch(chrome.runtime.getURL('main/subtract.js')).then((resp) => resp.text())) +
