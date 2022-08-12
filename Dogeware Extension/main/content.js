@@ -1,12 +1,12 @@
 if (typeof version === 'undefined') {
-  const version = '5.7.7';
+  const version = '4.3';
 
   if (!window.injected) {
     window.injected = true;
     void (function () {
       void (async function () {
         try {
-          let resp = await fetch('https://raw.githubusercontent.com/MJMODZZ/Krunkercentral/main/Version/Version.json');
+          let resp = await fetch('https://raw.githubusercontent.com/MJMODZZ/Krunkercentral/main/Version/Version');
           let nVersion = await resp.text();
           if (nVersion && nVersion !== version) {
             if (confirm(`New version ${nVersion} of dogeware was found (You currently use version ${version}). It's recommended to install it, watch newest Krunkercentral Video.`)) {
