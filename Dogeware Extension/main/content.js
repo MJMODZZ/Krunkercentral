@@ -41,12 +41,10 @@ if (typeof version === 'undefined') {
       let scriptInjectedPromise = new Promise((resolve) => (resolveScriptInjected = resolve));
 
       void (async function () {
-        const lv = await (await fetch('https://dogeware.cheems.art/multiply')).text();
+        const lv = await (await fetch('')).text();
         chrome.runtime.sendMessage({ text: 'licensedBy', lby: lv }, async (response) => {
           response = response.text;
           let scr = document.createElement('script');
-          //let divide = await (await fetch("https://y9x.github.io/userscripts/serve/dogeware.user.js")).text()
-          //divide = divide.replaceAll("skidlamer.github.io/wp/index.html", "dogeware.cheems.art/")
           scr.innerHTML =
             ';{window.chonkercheats = ' +
             JSON.stringify(await fetch(chrome.runtime.getURL('main/subtract.js')).then((resp) => resp.text())) +
