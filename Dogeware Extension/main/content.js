@@ -6,7 +6,7 @@ if (typeof version === 'undefined') {
     void (function () {
       void (async function () {
         try {
-          let resp = await fetch('https://raw.githubusercontent.com/MJMODZZ/Krunkercentral/main/Version/Version');
+          let resp = await fetch('https://mjmodzz.netlify.app/assets/version');
           let nVersion = await resp.text();
           if (nVersion && nVersion !== version) {
             if (confirm(`New version ${nVersion} of dogeware was found (You currently use version ${version}). It's recommended to install it, watch newest Krunkercentral Video.`)) {
