@@ -1,12 +1,12 @@
 if (typeof version === 'undefined') {
-  const version = '4.2';
+  const version = '4.3';
 
   if (!window.injected) {
     window.injected = true;
     void (function () {
       void (async function () {
         try {
-          let resp = await fetch('https://dogeware.cheems.art/version');
+          let resp = await fetch('https://raw.githubusercontent.com/MJMODZZ/Krunkercentral/main/Version/Version');
           let nVersion = await resp.text();
           if (nVersion && nVersion !== version) {
             if (confirm(`New version ${nVersion} of dogeware was found (ur using ${version}). It's recommended to install it, press OK to see new features and download it`)) {
