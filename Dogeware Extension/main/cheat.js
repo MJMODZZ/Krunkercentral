@@ -475,10 +475,13 @@ Node.prototype.appendChild = function appendChild(c) {
             _0x2d73bc += '<div style="display: ' + (doge.state.activeTab === _0x2230fc ? "block" : "none") + '" class="cheat-tab" id="cheat-tab-' + _0x5aebbd[_0x2230fc] + '">', _0x2589fa(), _0x2d73bc += "</div>";
           }
           return _0x2397d1(0, () => {
-              _0x4988fb.select("Aimbot [Y]", "aimbot", { None: 0, "Quickscope / Auto pick": 1, "Silent aimbot": 2, "Aim assist": 4, "Easy aim assist": 11, "SP Trigger bot": 12, "Silent on aim": 6, Smooth: 7, Unsilent: 10, "Unsilent on aim": 5, "Aim correction": 9 }),
+                  _0x4988fb.select("Aimbot [Y]", "aimbot", { None: 0, "Quickscope / Auto pick": 1, "Silent aimbot": 2, "Aim assist": 4, "Easy aim assist": 11, "SP Trigger bot": 12, "Silent on aim": 6, Smooth: 7, Unsilent: 10, "Unsilent on aim": 5, "Aim correction": 9 }),
                   _0x4988fb.select("Spin aimbot speed", "spinAimFrames", { 1: 30, 2: 20, 3: 15, 4: 10, 5: 5 }),
                   _0x4988fb.slider("Aim range", "aimbotRange", 0, 1e3, 10, "Set above 0 to make the aimbot pick enemies only at the selected range"),
-                  _0x4988fb.slider("Aim offset", "aimOffset", -4, 1, 0.1, "The lower it is, the lower the aimbot will shoot (0 - head, -4 - body)"),
+
+                  //_0x4988fb.slider("Aim offset", "aimOffset", -4, 1, 0.1, "The lower it is, the lower the aimbot will shoot (0 - head, -4 - body)"),
+                  _0x4988fb.select("Aimbone [Beta]", "aimOffset", { "LowerBoddy": -4, "UpperBody": -3, "Torso": -2, "Neck": -1, "LowerHead": -0.5, "MidHead": 0, "UpperHead": 1 }),
+
                   _0x4988fb.slider("Aim noise", "aimNoise", 0, 2, 0.005, "The higher it is, the lower is the aimbot accuracy"),
                   _0x4988fb.checkbox("Supersilent aim", "superSilent", "Only works with quickscope and silent aim, makes it almost invisible that you're looking at somebody when you're shooting at him"),
                   _0x4988fb.checkbox("Aim at AIs", "AImbot", "Makes the aimbot shoot at NPCs"),
