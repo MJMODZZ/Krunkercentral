@@ -827,19 +827,27 @@ class Dogeware {
 
         return t+="</table></tr>",
             i(0, ()=> {
-                    e.select("Aimbot [Y]", "aimbot", {
-                            None:0, "Quickscope / Auto pick":1, "Silent aimbot":2, "Aim assist":4, "Easy aim assist":11, "SP Trigger bot":12, "Silent on aim":6, Smooth:7, Unsilent:10, "Unsilent on aim":5, "Aim correction":9
-                        }
+                    e.select("Aimbot [Y]", "aimbot", {None:0, "Quickscope / Auto pick":1, "Silent aimbot":2, "Aim assist":4, "Easy aim assist":11, "SP Trigger bot":12, "Silent on aim":6, Smooth:7, Unsilent:10, "Unsilent on aim":5, "Aim correction":9}
 
-                    ), e.select("Spin aimbot speed", "spinAimFrames", {
-                            1:30, 2:20, 3:15, 4:10, 5:5
-                        }
+                    ), e.select("Spin aimbot speed", "spinAimFrames", {1:30, 2:20, 3:15, 4:10, 5:5}
 
-                    ), e.slider("Aim range", "aimbotRange", 0, 1e3, 10, "Set above 0 to make the aimbot pick enemies only at the selected range"), e.slider("Aim offset", "aimOffset", -4, 1, .1, "The lower it is, the lower the aimbot will shoot (0 - head, -4 - body)"), e.slider("Aim noise", "aimNoise", 0, 2, .005, "The higher it is, the lower is the aimbot accuracy"), e.checkbox("Supersilent aim", "superSilent", "Only works with quickscope and silent aim, makes it almost invisible that you're looking at somebody when you're shooting at him"), e.checkbox("Aim at AIs", "AImbot", "Makes the aimbot shoot at NPCs"), e.checkbox("FOV check", "frustumCheck", "Makes you only shoot at enemies that are in your field of view. Prevents 180 flicks"), e.checkbox("FOV box", "fovbox", "Creates a box in which enemies can be targetted, enable with FOV check"), e.select("FOV box size", "fovBoxSize", {
-                            Big:1, Medium:2, Small:3
-                        }
+                        ), e.slider("Aim range", "aimbotRange", 0, 1e3, 10, "Set above 0 to make the aimbot pick enemies only at the selected range"),
 
-                    ), e.checkbox("Wallbangs", "wallbangs", "Makes the aimbot shoot enemies behind walls"), e.checkbox("Aimbot range check", "rangeCheck", "Checks if the enemy is in range of your weapon before shooting it, disable for rocket launcher"), e.checkbox("Auto reload", "autoReload", "Automatically reloads your weapon when it's out of ammo"), e.checkbox("Prevent melee throwing", "preventMeleeThrowing", "Prevents you from throwing your knife")
+                        //e.slider("Aim offset", "aimOffset", -4, 1, .1, "The lower it is, the lower the aimbot will shoot (0 - head, -4 - body)"),
+                        e.select("Aimbone [Beta]", "aimOffset", { "LowerBoddy": -4, "UpperBody": -3, "Torso": -2, "Neck": -1, "LowerHead": -0.5, "MidHead": 0, "UpperHead": 1 }
+                        
+                        e.slider("Aim noise", "aimNoise", 0, 2, .005, "The higher it is, the lower is the aimbot accuracy"),
+                        e.checkbox("Supersilent aim", "superSilent", "Only works with quickscope and silent aim, makes it almost invisible that you're looking at somebody when you're shooting at him"),
+                        e.checkbox("Aim at AIs", "AImbot", "Makes the aimbot shoot at NPCs"),
+                        e.checkbox("FOV check", "frustumCheck", "Makes you only shoot at enemies that are in your field of view. Prevents 180 flicks"),
+                        e.checkbox("FOV box", "fovbox", "Creates a box in which enemies can be targetted, enable with FOV check"),
+                        e.select("FOV box size", "fovBoxSize", {Big:1, Medium:2, Small:3}
+
+                        ),
+                        e.checkbox("Wallbangs", "wallbangs", "Makes the aimbot shoot enemies behind walls"),
+                        e.checkbox("Aimbot range check", "rangeCheck", "Checks if the enemy is in range of your weapon before shooting it, disable for rocket launcher"),
+                        e.checkbox("Auto reload", "autoReload", "Automatically reloads your weapon when it's out of ammo"),
+                        e.checkbox("Prevent melee throwing", "preventMeleeThrowing", "Prevents you from throwing your knife")
                 }
 
             ),
