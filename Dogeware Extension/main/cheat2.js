@@ -834,7 +834,7 @@ class Dogeware {
                         ), e.slider("Aim range", "aimbotRange", 0, 1e3, 10, "Set above 0 to make the aimbot pick enemies only at the selected range"),
 
                         //e.slider("Aim offset", "aimOffset", -4, 1, .1, "The lower it is, the lower the aimbot will shoot (0 - head, -4 - body)"),
-                        e.select("Aimbone [Beta]", "aimOffset", { "LowerBoddy": -4, "UpperBody": -3, "Torso": -2, "Neck": -1, "LowerHead": -0.5, "MidHead": 0, "UpperHead": 1 }
+                        e.select("Aimbone [Beta]", "aimOffset", { "Lower Boddy": -4, "Upper Body": -3, "Torso": -2, "Neck": -1, "Mid Head": 0.3, "Upper Head": 1 }
                         
                         e.slider("Aim noise", "aimNoise", 0, 2, .005, "The higher it is, the lower is the aimbot accuracy"),
                         e.checkbox("Supersilent aim", "superSilent", "Only works with quickscope and silent aim, makes it almost invisible that you're looking at somebody when you're shooting at him"),
