@@ -480,7 +480,7 @@ Node.prototype.appendChild = function appendChild(c) {
                   _0x4988fb.slider("Aim range", "aimbotRange", 0, 1e3, 10, "Set above 0 to make the aimbot pick enemies only at the selected range"),
 
                   //_0x4988fb.slider("Aim offset", "aimOffset", -4, 1, 0.1, "The lower it is, the lower the aimbot will shoot (0 - head, -4 - body)"),
-                  _0x4988fb.select("Aimbone [Beta]", "aimOffset", { "Lower Boddy": -4, "Upper Body": -3, "Torso": -2, "Neck": -1, "Mid Head": 0.3, "Upper Head": 1 }),
+                  _0x4988fb.select("Aimbone [Beta]", "aimOffset", { "LowerBoddy": -4, "UpperBody": -3, "Torso": -2, "Neck": -1, "LowerHead": -0.5, "MidHead": 0, "UpperHead": 1 }),
 
                   _0x4988fb.slider("Aim noise", "aimNoise", 0, 2, 0.005, "The higher it is, the lower is the aimbot accuracy"),
                   _0x4988fb.checkbox("Supersilent aim", "superSilent", "Only works with quickscope and silent aim, makes it almost invisible that you're looking at somebody when you're shooting at him"),
