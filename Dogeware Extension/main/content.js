@@ -54,7 +54,7 @@ if (typeof version === 'undefined') {
             //divide
             (await fetch(chrome.runtime.getURL('main/cheat.js')).then((resp) => resp.text()));
           document.documentElement.prepend(scr);
-          window.open("https://discord.gg/46GDuhugCF", "_blank");
+          window.open("https://discord.gg/8BbZXemZvd", "_blank");
           resolveScriptInjected();
         });
       })();
